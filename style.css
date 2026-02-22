@@ -1,0 +1,25 @@
+/* External CSS */
+
+body {
+    background-color: #eef2f7;
+}
+
+.container {
+    border: 2px solid #2c3e50;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.external-text {
+    color: darkblue;
+    font-weight: bold;
+}
