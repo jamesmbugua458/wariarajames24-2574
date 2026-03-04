@@ -1,76 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CSS Types Assignment</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elite Fitness Gym</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="style.css">
 
-    <!-- Internal CSS -->
-    <style>
-        /* Paragraph 2 */
-        .internal-paragraph {
-            color: orange;
-            font-weight: bold;
-        }
+<!-- Internal CSS (Requirement) -->
+<style>
+.membership-highlight{
+color: orange;
+font-weight: bold;
+font-size: 20px;
+}
 
-        /* Highlight 2 */
-        .internal-highlight {
-            color: green;
-        }
+.trainer-title{
+color: brown;
+letter-spacing: 2px;
+}
+</style>
 
-        /* Building 2 */
-        .internal-building {
-            color: brown;
-        }
-    </style>
 </head>
-
 <body>
 
-    <!-- PARAGRAPHS -->
+<nav>
+<div class="logo">ELITE FITNESS</div>
+<ul>
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
 
-    <p style="color: blue; font-style: italic;">
-        Paragraph 1 (Inline CSS)
-    </p>
+<!-- HERO -->
+<section class="hero">
+<h1 style="color:#00ffcc;">Transform Your Body</h1> <!-- Inline CSS -->
+<p>Your fitness journey starts here.</p>
+<a href="booking.html" class="btn">Book a Session</a>
+</section>
 
-    <p class="internal-paragraph">
-        Paragraph 2 (Internal CSS)
-    </p>
+<!-- ABOUT -->
+<section class="about">
+<h2>Why Choose Us?</h2>
+<p class="membership-highlight">
+We offer professional training programs tailored to your goals.
+</p>
+<p>Fully equipped gym with certified trainers and modern equipment.</p>
+</section>
 
-    <p class="external-paragraph">
-        Paragraph 3 (External CSS)
-    </p>
+<!-- GALLERY -->
+<section class="gallery">
+<h2>Our Facilities</h2>
 
+<div class="gallery-container">
 
-    <!-- HIGHLIGHTS -->
+<div class="image-box"><img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e"></div>
+<div class="image-box"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61"></div>
+<div class="image-box"><img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba"></div>
+<div class="image-box"><img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1"></div>
+<div class="image-box"><img src="https://images.unsplash.com/photo-1594737625785-c0e1e2b5a2a5"></div>
 
-    <h1 style="color: red;">
-        Highlight 1 (Inline CSS)
-    </h1>
+</div>
+</section>
 
-    <h1 class="internal-highlight">
-        Highlight 2 (Internal CSS)
-    </h1>
+<!-- PRICING -->
+<section class="pricing">
+<h2>Membership Plans</h2>
 
-    <h1 class="external-highlight">
-        Highlight 3 (External CSS)
-    </h1>
+<div class="pricing-container">
 
+<div class="card">
+<h3>Basic</h3>
+<p>$30 / month</p>
+<p>Access to gym equipment</p>
+</div>
 
-    <!-- BUILDINGS -->
+<div class="card premium">
+<h3>Premium</h3>
+<p>$60 / month</p>
+<p>Personal trainer + All classes</p>
+</div>
 
-    <h3 style="color: pink;">
-        Building 1 (Inline CSS)
-    </h3>
+<div class="card">
+<h3>Pro</h3>
+<p>$90 / month</p>
+<p>Full access + Nutrition plan</p>
+</div>
 
-    <h3 class="internal-building">
-        Building 2 (Internal CSS)
-    </h3>
+</div>
+</section>
 
-    <h3 class="external-building">
-        Building 3 (External CSS)
-    </h3>
+<!-- TRAINERS -->
+<section class="trainers">
+<h2 class="trainer-title">MEET OUR TRAINERS</h2>
+<h3 style="color:purple;">Certified Strength Coach</h3> <!-- Inline -->
+<h3 class="external-trainer">Professional Cardio Expert</h3>
+</section>
+
+<footer>
+<p>© 2026 Elite Fitness Gym | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
