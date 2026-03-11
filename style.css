@@ -1,4 +1,3 @@
-
 /* =============================================
    EXTERNAL STYLESHEET — styles.css
    Topic: Investments & Money
@@ -36,10 +35,9 @@ body {
 }
 
 /* =============================================
-   HEADINGS — IDs (unique, one-off elements)
+   HEADINGS — ID (H1 only, truly unique)
    ============================================= */
 
-/* H1 — Page Title */
 #page-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(2.4rem, 5vw, 3.8rem);
@@ -52,22 +50,11 @@ body {
   margin-bottom: 10px;
 }
 
-/* H2 — First Section Title (unique ID) */
-#section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
-  font-weight: 700;
-  color: var(--green);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin: 48px 0 20px;
-}
-
 /* =============================================
    HEADINGS — Classes (reusable across page)
    ============================================= */
 
-/* H2 — Reusable section heading class */
+/* H2 — All chapter titles share this class */
 .section-heading {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.5rem, 3vw, 2.1rem);
@@ -82,4 +69,82 @@ body {
 .subsection-heading {
   font-family: 'Playfair Display', serif;
   font-size: 1.35rem;
-  font-weight
+  font-weight: 700;
+  color: var(--ink);
+  border-left: 4px solid var(--gold);
+  padding-left: 14px;
+  margin: 36px 0 14px;
+}
+
+/* H4 — Minor headings */
+.minor-heading {
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 28px 0 10px;
+}
+
+/* =============================================
+   PARAGRAPHS — IDs (unique elements)
+   ============================================= */
+
+#intro-paragraph {
+  font-size: 1.13rem;
+  color: var(--ink);
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+
+#intro-paragraph::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.2rem;
+  font-weight: 900;
+  color: var(--green);
+  float: left;
+  line-height: 0.75;
+  margin: 6px 10px 0 0;
+}
+
+#closing-paragraph {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-style: italic;
+  border-top: 1px solid var(--rule);
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+/* =============================================
+   PARAGRAPHS — Classes (reusable)
+   ============================================= */
+
+.body-paragraph {
+  font-size: 1rem;
+  color: var(--ink);
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+.highlight-paragraph {
+  font-size: 1.05rem;
+  color: var(--ink);
+  background: var(--light-gold);
+  border-left: 5px solid var(--gold);
+  padding: 16px 20px;
+  margin: 28px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+/* =============================================
+   UTILITY
+   ============================================= */
+
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 40px 0;
+}
