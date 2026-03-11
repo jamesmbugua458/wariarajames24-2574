@@ -1,175 +1,85 @@
-body{
-margin:0;
-font-family:'Segoe UI',sans-serif;
-color:white;
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438');
-background-size:cover;
-background-attachment:fixed;
-background-position:center;
+
+/* =============================================
+   EXTERNAL STYLESHEET — styles.css
+   Topic: Investments & Money
+   Headings (H1–H4) + 6 Paragraphs
+   Using IDs and Classes
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ---------- CSS Variables ---------- */
+:root {
+  --ink:        #0f1f12;
+  --bg:         #f4f9f4;
+  --green:      #1a6b3c;
+  --gold:       #c8962a;
+  --light-gold: #fdf3dc;
+  --muted:      #5a6e5c;
+  --rule:       #ccdece;
 }
 
-/* NAV */
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(0,0,0,0.85);
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.8;
+  padding: 60px 24px;
 }
 
-.logo{
-font-size:22px;
-font-weight:bold;
+.page-wrapper {
+  max-width: 740px;
+  margin: 0 auto;
 }
 
-nav ul{
-list-style:none;
-display:flex;
-gap:30px;
+/* =============================================
+   HEADINGS — IDs (unique, one-off elements)
+   ============================================= */
+
+/* H1 — Page Title */
+#page-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 900;
+  color: var(--green);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 16px;
+  margin-bottom: 10px;
 }
 
-nav ul li a{
-color:white;
-text-decoration:none;
-transition:0.3s;
+/* H2 — First Section Title (unique ID) */
+#section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 48px 0 20px;
 }
 
-nav ul li a:hover,
-.active{
-color:#00ffcc;
+/* =============================================
+   HEADINGS — Classes (reusable across page)
+   ============================================= */
+
+/* H2 — Reusable section heading class */
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 48px 0 20px;
 }
 
-/* HERO */
-.hero{
-text-align:center;
-padding:140px 20px;
-}
-
-.hero h1{
-font-size:55px;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 30px;
-background:#00ffcc;
-color:black;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-.btn:hover{
-background:white;
-transform:scale(1.1);
-}
-
-/* SECTIONS */
-section{
-padding:70px 20px;
-text-align:center;
-}
-
-/* GALLERY */
-.gallery-container{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-margin-top:40px;
-}
-
-.image-box{
-overflow:hidden;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.6);
-}
-
-.image-box img{
-width:100%;
-transition:0.5s;
-}
-
-.image-box:hover img{
-transform:scale(1.15);
-}
-
-/* PRICING */
-.pricing-container{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-}
-
-.card{
-background:rgba(255,255,255,0.1);
-padding:30px;
-border-radius:15px;
-width:250px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.premium{
-background:#00ffcc;
-color:black;
-}
-
-/* FORMS */
-.form-section{
-padding:100px 20px;
-text-align:center;
-}
-
-form{
-max-width:400px;
-margin:0 auto;
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-
-input,select,textarea{
-padding:12px;
-border-radius:8px;
-border:none;
-outline:none;
-}
-
-textarea{
-resize:none;
-height:100px;
-}
-
-.contact-info{
-margin-top:30px;
-}
-
-/* External CSS requirement */
-.external-trainer{
-color:darkcyan;
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-.gallery-container{
-grid-template-columns:repeat(2,1fr);
-}
-}
-
-@media(max-width:600px){
-.gallery-container{
-grid-template-columns:1fr;
-}
-
-.hero h1{
-font-size:35px;
-}
-}
+/* H3 — Subsection headings */
+.subsection-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight
