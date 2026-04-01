@@ -1,150 +1,75 @@
-/* =============================================
-   EXTERNAL STYLESHEET — styles.css
-   Topic: Investments & Money
-   Headings (H1–H4) + 6 Paragraphs
-   Using IDs and Classes
-   ============================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
-
-/* ---------- CSS Variables ---------- */
-:root {
-  --ink:        #0f1f12;
-  --bg:         #f4f9f4;
-  --green:      #1a6b3c;
-  --gold:       #c8962a;
-  --light-gold: #fdf3dc;
-  --muted:      #5a6e5c;
-  --rule:       #ccdece;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-/* ---------- Reset & Base ---------- */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background-color: var(--bg);
-  color: var(--ink);
-  font-family: 'Lora', Georgia, serif;
-  line-height: 1.8;
-  padding: 60px 24px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f6f8; /* light clean background */
 }
 
-.page-wrapper {
-  max-width: 740px;
-  margin: 0 auto;
+/* FORM BOX */
+.form-box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 320px;
+    color: #333;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
-/* =============================================
-   HEADINGS — ID (H1 only, truly unique)
-   ============================================= */
-
-#page-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
-  font-weight: 900;
-  color: var(--green);
-  line-height: 1.1;
-  letter-spacing: -1.5px;
-  border-bottom: 3px solid var(--gold);
-  padding-bottom: 16px;
-  margin-bottom: 10px;
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #111;
 }
 
-/* =============================================
-   HEADINGS — Classes (reusable across page)
-   ============================================= */
-
-/* H2 — All chapter titles share this class */
-.section-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.5rem, 3vw, 2.1rem);
-  font-weight: 700;
-  color: var(--green);
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin: 48px 0 20px;
+/* INPUTS */
+.input-group {
+    margin-bottom: 20px;
 }
 
-/* H3 — Subsection headings */
-.subsection-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--ink);
-  border-left: 4px solid var(--gold);
-  padding-left: 14px;
-  margin: 36px 0 14px;
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
-/* H4 — Minor headings */
-.minor-heading {
-  font-family: 'Lora', serif;
-  font-size: 1rem;
-  font-weight: 600;
-  font-style: italic;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin: 28px 0 10px;
+.input-group input:focus {
+    border-color: #333;
 }
 
-/* =============================================
-   PARAGRAPHS — IDs (unique elements)
-   ============================================= */
-
-#intro-paragraph {
-  font-size: 1.13rem;
-  color: var(--ink);
-  line-height: 1.9;
-  margin-bottom: 24px;
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #ffffff;
+    border: 2px solid #333;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-#intro-paragraph::first-letter {
-  font-family: 'Playfair Display', serif;
-  font-size: 4.2rem;
-  font-weight: 900;
-  color: var(--green);
-  float: left;
-  line-height: 0.75;
-  margin: 6px 10px 0 0;
+button:hover {
+    background: #333;
+    color: #fff;
 }
 
-#closing-paragraph {
-  font-size: 0.95rem;
-  color: var(--muted);
-  font-style: italic;
-  border-top: 1px solid var(--rule);
-  padding-top: 20px;
-  margin-top: 40px;
-}
-
-/* =============================================
-   PARAGRAPHS — Classes (reusable)
-   ============================================= */
-
-.body-paragraph {
-  font-size: 1rem;
-  color: var(--ink);
-  line-height: 1.85;
-  margin-bottom: 20px;
-}
-
-.highlight-paragraph {
-  font-size: 1.05rem;
-  color: var(--ink);
-  background: var(--light-gold);
-  border-left: 5px solid var(--gold);
-  padding: 16px 20px;
-  margin: 28px 0;
-  border-radius: 0 4px 4px 0;
-}
-
-/* =============================================
-   UTILITY
-   ============================================= */
-
-.section-divider {
-  border: none;
-  border-top: 1px solid var(--rule);
-  margin: 40px 0;
+/* FOOTER */
+.form-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #666;
 }
